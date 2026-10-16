@@ -1,0 +1,32 @@
+:root{--bg:#0e100f;--card:#171a18;--c2:#1f2320;--bd:#2a2f2b;--tx:#eef2ea;--mu:#8f998f;--ac:#c6f432;--on:#10140a;--bad:#ff6b5a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme=light]{--bg:#f3f5f0;--card:#fff;--c2:#eef1ea;--bd:#d9ded4;--tx:#141813;--mu:#5b655b;--ac:#4f7d00;--on:#fff;--bad:#c0392b;color-scheme:light}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 Inter,system-ui,sans-serif}
+#app{display:flex;min-height:100vh}
+h1,h2,h3,.big{font-family:'Barlow Condensed',Impact,sans-serif;margin:0;letter-spacing:.2px}
+h1{font-size:30px}h2{font-size:22px;margin:18px 0 8px}h3{font-size:18px}.big{font-size:32px;font-weight:700}
+.mu{color:var(--mu);font-size:13px}.ac{color:var(--ac)}.bad{color:var(--bad)}
+nav{width:200px;padding:16px 10px;border-right:1px solid var(--bd);position:sticky;top:0;height:100vh;flex:none}
+nav .logo{font:700 24px 'Barlow Condensed',sans-serif;color:var(--ac);padding:4px 12px 14px}
+nav button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--mu);padding:12px;border-radius:10px;font:500 15px inherit;cursor:pointer;min-height:44px}
+nav button.on{background:var(--c2);color:var(--ac)}nav .s{display:none}
+main{flex:1;min-width:0;max-width:900px;padding:18px 16px 90px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.grid .card{margin:0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.sp{justify-content:space-between}
+button,.btn{font:600 15px Inter,sans-serif;min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--bd);background:var(--c2);color:var(--tx);cursor:pointer}
+button.p{background:var(--ac);color:var(--on);border-color:var(--ac)}button.d{color:var(--bad)}button.sm{min-height:36px;padding:0 10px;font-size:13px}
+input,select,textarea{font:inherit;min-height:44px;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;width:100%}
+label{display:block;font-size:12px;color:var(--mu);margin-bottom:8px}label input,label select{margin-top:4px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.bar{height:10px;background:var(--c2);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+.set{display:grid;grid-template-columns:34px 1fr 1fr 56px 44px 36px;gap:6px;align-items:center;margin:6px 0}
+.set input{text-align:center;padding:6px 2px}.set.dn input{border-color:var(--ac)}.set button.ok.on{background:var(--ac);color:var(--on)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;background:var(--c2);color:var(--mu);margin-right:4px}
+.sticky{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.ch{width:100%;height:auto;display:block}.ch text{fill:var(--mu);font-size:9px}.ch polyline{fill:none;stroke:var(--ac);stroke-width:2}.ch circle{fill:var(--ac)}.ch rect{fill:var(--ac)}
+.banner{background:var(--ac);color:var(--on);border-radius:12px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}.banner button{background:var(--on);color:var(--ac);border:0}
+.modal{position:fixed;inset:0;background:#000a;display:grid;place-items:center;z-index:20;padding:20px}.modal .card{max-width:360px}
+.err{color:var(--bad);font-size:13px}.note{font-size:12px;color:var(--mu)}
+@media(max-width:800px){#app{display:block}nav{position:fixed;bottom:0;left:0;right:0;top:auto;width:auto;height:auto;display:flex;padding:4px 4px calc(4px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--bd);border-right:0;z-index:10}
+nav .logo{display:none}nav button{text-align:center;padding:6px 0;font-size:10.5px;min-height:48px}nav .l{display:none}nav .s{display:inline}}
